@@ -17,6 +17,7 @@ public section.
   class-methods LOAD
     importing
       !I_DATA type THEAD-TDNAME .
+  class-methods INIT .
 protected section.
 private section.
 
@@ -65,6 +66,11 @@ CLASS ZCL_HR_MEMSTORE IMPLEMENTATION.
       CLEAR v.
     ENDIF.
 
+  ENDMETHOD.
+
+
+  METHOD init.
+    FREE ds.
   ENDMETHOD.
 
 
